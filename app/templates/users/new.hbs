@@ -1,0 +1,16 @@
+<div>
+      <div>
+          {{input type="email" value=emailAddress placeholder="Please type your e-mail address." autofocus="autofocus" required="true"}}
+      </div>
+      <div>
+          {{input type="password" value=password placeholder="Password" required="true"}}
+      </div>
+      <div>
+          <button {{action 'createUser'}}>Signup</button>
+      </div>
+
+      {{#if responseMessage}}
+  {{responseMessage}}
+{{/if}}
+
+  </div>

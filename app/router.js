@@ -9,7 +9,9 @@ Router.map(function() {
   this.route('burger-places');
   this.route('about');
   this.route('contact');
-
+  this.route('users', function() {
+    this.route('new', {path: '/signup'});
+  });
 });
 
 export default Router;

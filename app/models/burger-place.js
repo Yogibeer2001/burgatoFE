@@ -4,7 +4,7 @@ import attr from 'ember-data/attr';
 
 export default Model.extend({
   // id: attr('number'),
-  name: attr('string'),
+  name: attr('string'), 
   address: attr('string'),
   phoneNo: attr('string'),
   reviewScore: attr('number'),
