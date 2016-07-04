@@ -14,17 +14,18 @@
 
 </div>
   <article class="listing">
-    <h3>{{model.burgerPlace.name}}</h3>
+    <h3>{{model.name}}</h3>
     <div class="detail owner">
-      <span>Rating:</span> {{model.burgerPlace.reviewScore}}
+      <span>Rating:</span> {{model.reviewScore}}
     </div>
     <div class="detail type">
-      <span>Location:</span> {{model.burgerPlace.address}}, {{model.burgerPlace.suburb}}
+      <span>Location:</span> {{model.address}}, {{model.suburb}}
     </div>
   </article>
-  <div class="listing">
-    {{model.reviews.bun}}
     {{#each model.reviews as |review|}}
+      <div class="listing">
       Bun: {{review.bun}}
+      Patty: {{review.patty}}
+      Chips: {{review.chips}}
+      </div>
     {{/each}}
-  </div>

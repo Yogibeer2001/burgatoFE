@@ -11,5 +11,5 @@ export default Model.extend({
   value: attr('number'),
   userId: attr('number'),
   burgerPlaceId: attr('number'),
-  post: belongsTo('burger-place')
+  burgerPlace: belongsTo('burger-place')
 });
