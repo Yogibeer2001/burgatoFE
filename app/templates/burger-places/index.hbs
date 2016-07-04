@@ -16,7 +16,7 @@
 </div>
 {{#each model as |burgerPlaces|}}
   <article class="listing">
-    <h3>{{burgerPlaces.name}}</h3>
+    <h3>{{#link-to "burger-places.burgerplace" burgerPlaces}}{{burgerPlaces.name}}{{/link-to}}</h3>
     <div class="detail owner">
       <span>Rating:</span> {{burgerPlaces.reviewScore}}
     </div>

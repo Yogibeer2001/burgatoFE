@@ -6,7 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('burger-places');
+  this.route('burger-places', function(){
+    this.route('burgerplace', {path: '/:burger-place_id/'});
+    this.route('reviews', {path: '/:burger-place_id/reviews'});
+  });
   this.route('about');
   this.route('contact');
   this.route('users', function() {

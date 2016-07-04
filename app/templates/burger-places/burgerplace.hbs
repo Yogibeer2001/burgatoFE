@@ -1,0 +1,30 @@
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Welcome!</h2>
+  <p>
+    We hope you find exactly what you're looking for in a place to satisfy your Burger needs.
+    <br>Browse our listings, or use the search box above to narrow your search.
+  </p>
+  {{#link-to 'about' class="button"}}
+    About Us
+  {{/link-to}}
+  {{#link-to 'contact' class="button"}}
+    Get contact!
+  {{/link-to}}
+
+</div>
+  <article class="listing">
+    <h3>{{model.burgerPlace.name}}</h3>
+    <div class="detail owner">
+      <span>Rating:</span> {{model.burgerPlace.reviewScore}}
+    </div>
+    <div class="detail type">
+      <span>Location:</span> {{model.burgerPlace.address}}, {{model.burgerPlace.suburb}}
+    </div>
+  </article>
+  <div class="listing">
+    {{model.reviews.bun}}
+    {{#each model.reviews as |review|}}
+      Bun: {{review.bun}}
+    {{/each}}
+  </div>
