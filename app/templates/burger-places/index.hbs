@@ -6,22 +6,25 @@
     We hope you find exactly what you're looking for in a place to satisfy your Burger needs.
     <br>Browse our listings, or use the search box above to narrow your search.
   </p>
-  {{#link-to 'about' class="button"}}
+  <!-- {{#link-to 'about' class="button"}}
     About Us
   {{/link-to}}
   {{#link-to 'contact' class="button"}}
     Get contact!
-  {{/link-to}}
+  {{/link-to}} -->
 
 </div>
 {{#each model as |burgerPlaces|}}
+{{#link-to "burger-places.burgerplace" burgerPlaces}}
   <article class="listing">
-    <h3>{{#link-to "burger-places.burgerplace" burgerPlaces}}{{burgerPlaces.name}}{{/link-to}}</h3>
+    <h3>{{burgerPlaces.name}}</h3>
     <div class="detail owner">
-      <span>Rating:</span> {{burgerPlaces.reviewScore}}
+      <span>Overall Rating:</span> {{burgerPlaces.reviewScore}}
     </div>
     <div class="detail type">
-      <span>Location:</span> {{burgerPlaces.address}}, {{burgerPlaces.suburb}}
+      <span>Location:</span> {{burgerPlaces.address}}, {{burgerPlaces.suburb}}, {{burgerPlaces.post-code}}<br>
+      <span>Contact:</span> {{burgerPlaces.phoneNo}}
     </div>
   </article>
+  {{/link-to}}
 {{/each}}

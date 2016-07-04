@@ -5,27 +5,43 @@
     We hope you find exactly what you're looking for in a place to satisfy your Burger needs.
     <br>Browse our listings, or use the search box above to narrow your search.
   </p>
-  {{#link-to 'about' class="button"}}
+  <!-- {{#link-to 'about' class="button"}}
     About Us
-  {{/link-to}}
+  {{/link-to}}<br>
   {{#link-to 'contact' class="button"}}
     Get contact!
+  {{/link-to}}<br> -->
+  {{#link-to 'burger-places.index' class="button"}} back to overview
   {{/link-to}}
+
 
 </div>
   <article class="listing">
+    <!-- {{#link-to 'review' class="button"}} new Review
+    {{/link-to}} -->
+
     <h3>{{model.name}}</h3>
     <div class="detail owner">
-      <span>Rating:</span> {{model.reviewScore}}
+      <span>Overall Rating:</span> {{model.reviewScore}}
     </div>
     <div class="detail type">
-      <span>Location:</span> {{model.address}}, {{model.suburb}}
+      <span>Location:</span> {{model.address}}, {{model.suburb}}, {{model.post-code}}<br>
+      <span>Contact: </span> {{model.phoneNo}}
+      <span>web: </span> {{model.webAddress}}
     </div>
+
   </article>
     {{#each model.reviews as |review|}}
       <div class="listing">
-      Bun: {{review.bun}}
-      Patty: {{review.patty}}
-      Chips: {{review.chips}}
+        Review No.: {{review.id}}<br><br>
+
+      Bun: {{review.bun}}<br>
+      Patty: {{review.patty}}<br>
+      Chips: {{review.chips}}<br>
+      atmosphere: {{review.atmosphere}}<br>
+      value: {{review.value}}<br>
+      comment: {{review.comment}}<br>
+      <!-- by User: {{user.email}} -->
+
       </div>
     {{/each}}

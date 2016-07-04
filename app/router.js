@@ -7,13 +7,14 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('burger-places', function(){
-    this.route('burgerplace', {path: '/:burger-place_id/'});
-    this.route('reviews', {path: '/:burger-place_id/reviews'});
+    this.route('burgerplace', {path: '/:burger-place_id/'}),
+    this.route('review', {path: '/:burger-place_id/new-review'}),
+    this.route('reviews');
   });
   this.route('about');
   this.route('contact');
-  this.route('users', function() {
-    this.route('new', {path: '/signup'});
+  this.route('users', {path: '/'}, function() {
+    this.route('new', {path: '/'});
   });
 });
 
