@@ -1,20 +1,35 @@
-<div class="container">
-  <div class="menu">
-    {{#link-to 'index'}}
-      <h1 class="left">
-        <em>Burgato</em>
-      </h1>
-    {{/link-to}}
-    <div class="left links">
-      {{#link-to 'about'}}
-        About
-      {{/link-to}}
-      {{#link-to 'contact'}}
-        Contact
-      {{/link-to}}
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" id="logo-container" class="brand-logo left"><img class="header-img" id="logo" src="http://i.imgur.com/bx0G0LA.png"/>Burgato</a>
+      <ul id="nav-mobile" class="right">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#"> Rating</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
     </div>
-  </div>
-  <div class="body">
+  </nav>
+
+  <div class="container">
     {{outlet}}
   </div>
-</div>
+
+
+
+  <footer class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text"> Burgato</h5>
+                  <p class="grey-text text-lighten-4"> Australia's No.1 Burger Rating Site</p>
+                </div>
+
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2016 Burgato Inc.
+              <a class="grey-text text-lighten-4 right" href="#!">Contact Us</a>
+              </div>
+            </div>
+          </footer>
