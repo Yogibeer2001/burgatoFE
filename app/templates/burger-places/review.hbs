@@ -1,1 +1,37 @@
-hello
+<div>
+        {{input type="hidden"  value=model.id }}
+</div>
+<div >
+        <label>Bun</label>
+        {{input type="number" min="0" max="5" value=bun placeholder="Bun" required="true"}}
+      </div>
+      <div>
+        <label>Patty</label>
+          {{input type="number" min="0" max="5"value=patty placeholder="Patty RATING BETWEEN 1 AND 5" required="true"}}
+      </div>
+      <div>
+        <label>Chips</label>
+          {{input type="number" min="0" max="5"value=chips placeholder="Chips RATING BETWEEN 1 AND 5 " required="true"}}
+      </div>
+      <div>
+        <label>Atmosphere</label>
+          {{input type="number" min="0" max="5"value=atmosphere placeholder="Atmosphere RATING BETWEEN 1 AND 5" required="true"}}
+      </div>
+      <div>
+        <label>Value</label>
+          {{input type="number" min="0" max="5" value=value placeholder="Value RATING BETWEEN 1 AND 5" required="true"}}
+      </div>
+
+      <div>
+        <label>Comment</label>
+          {{input type="text" value=comment placeholder="Comment" required="true"}}
+      </div>
+
+
+      <div>
+          <button {{action 'createReview'}}>Submit</button>
+      </div>
+
+      {{#if responseMessage}}
+  {{responseMessage}}
+{{/if}}
