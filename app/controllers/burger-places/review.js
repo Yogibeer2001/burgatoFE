@@ -11,22 +11,24 @@ export default Ember.Controller.extend({
         const atmosphere = this.get('atmosphere');
         const comment = this.get('comment');
         const value = this.get('value');
-        const burgerPlaceId = this.get('model.id');
+        const burgerPlaceId = this.get('model').get('id');
         // const userId = this.get('user_id');
-        // const burgerPlaceId = this.get('burger_place_id');
-
+// console.log(this.get('model').get('id'));
+let burgerplace = this.get('store').peekRecord('burger-place', burgerPlaceId);
         const newreview = this.store
                               .createRecord('review', {
                                 bun: bun,
                                 patty:patty,
                                 chips:chips,
-                                atmosphere:atmosphere, comment:comment,
+                                atmosphere:atmosphere,
+                                comment:comment,
                                 value:value,
-                                burgerPlaceId:burgerPlaceId });
+                                burgerPlace:burgerplace
+                               });
 
             newreview.save().then(() => {
             // Success callback
-            this.transitionToRoute('burger-places/:burger-places_id');
+            this.transitionToRoute('/:burger-places_id');
           }).catch((error) => {
             this.set('responseMessage', error);
           });

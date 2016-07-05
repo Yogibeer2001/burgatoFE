@@ -12,5 +12,5 @@ export default Model.extend({
   suburb: attr('string'),
   city: attr('string'),
   webAddress: attr('string'),
-  reviews: hasMany('review')
+  reviews: hasMany('review', {async:true})
 });
