@@ -1,30 +1,36 @@
-
-<div class="jumbo">
-  <div class="right tomster"></div>
-  <h2>Welcome!</h2>
-  <p>
-    We hope you find exactly what you're looking for in a place to satisfy your Burger needs.
-    <br>Browse our listings, or use the search box above to narrow your search.
+<div class="container">
+  <h4 class="center-align">Welcome to Burgato!</h4>
+    <img src="http://sudasuta.com/wp-content/uploads/2013/09/Burgers-21.jpg" id="landing-image">
+  <p class="center-align">
+    The best burger spots in Australia as rated by you.
+    <br>Browse your favourite burger venues, or use the search box above to narrow your search. Rate and review your favourites.
   </p>
-  <!-- {{#link-to 'about' class="button"}}
-    About Us
-  {{/link-to}}
-  {{#link-to 'contact' class="button"}}
-    Get contact!
-  {{/link-to}} -->
+        <form>
+          <div class="input-field z-depth-1">
+            <input id="search" type="search" placeholder="Find your best burger">
+            <i class="material-icons red-text">search</i>
+          </div>
+        </form>
 
-</div>
+
+
+
 {{#each model as |burgerPlaces|}}
 {{#link-to "burger-places.burgerplace" burgerPlaces}}
-  <article class="listing">
-    <h3>{{burgerPlaces.name}}</h3>
-    <div class="detail owner">
-      <span>Overall Rating:</span> {{burgerPlaces.reviewScore}}
+<div>
+  <article class="name">
+    <h5>{{burgerPlaces.name}}</h5>
+    <div class="rating left-align">
+    {{star-rating item=burgerPlaces rating=burgerPlaces.reviewScore fullClassNames='fa fa-star' emptyClassNames='' }}
+
     </div>
+
     <div class="detail type">
-      <span>Location:</span> {{burgerPlaces.address}}, {{burgerPlaces.suburb}}, {{burgerPlaces.post-code}}<br>
-      <span>Contact:</span> {{burgerPlaces.phoneNo}}
+      <span>Location:</span> {{burgerPlaces.address}}, {{burgerPlaces.suburb}}
     </div>
   </article>
-  {{/link-to}}
+</div>
+{{/link-to}}
 {{/each}}
+
+</div>

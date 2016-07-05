@@ -1,47 +1,53 @@
-<div class="jumbo">
-  <div class="right tomster"></div>
-  <h2>Welcome!</h2>
-  <p>
-    We hope you find exactly what you're looking for in a place to satisfy your Burger needs.
-    <br>Browse our listings, or use the search box above to narrow your search.
+<div class="container">
+  <h4 class="center-align">Detailed Review!</h4>
+  <p class="center-align">
+    See the detailed review below:
   </p>
-  <!-- {{#link-to 'about' class="button"}}
-    About Us
-  {{/link-to}}<br>
-  {{#link-to 'contact' class="button"}}
-    Get contact!
-  {{/link-to}}<br> -->
-  {{#link-to 'burger-places.index' class="button"}} back to overview
+  <<div class="center-align" >
+  {{#link-to 'burger-places.index' class="waves-effect waves-light red btn"}} Return to search
   {{/link-to}}
+  </div>
 
 
 </div>
-  <article class="listing">
-    <!-- {{#link-to 'review' class="button"}} new Review
-    {{/link-to}} -->
-
-    <h3>{{model.name}}</h3>
-    <div class="detail owner">
+  <article class="name">
+    <h4>{{model.name}}</h4>
+    <div class="rating left-align">
       <span>Overall Rating:</span> {{model.reviewScore}}
     </div>
     <div class="detail type">
       <span>Location:</span> {{model.address}}, {{model.suburb}}, {{model.post-code}}<br>
-      <span>Contact: </span> {{model.phoneNo}}
-      <span>web: </span> {{model.webAddress}}
+      <span>Contact: </span> {{model.phoneNo}} <br>
+      <span>Web: </span> {{model.webAddress}}
     </div>
 
   </article>
-    {{#each model.reviews as |review|}}
-      <div class="listing">
-        Review No.: {{review.id}}<br><br>
+  <table class="striped centered">
+       <thead>
+         <tr>
+              <th data-field="id">Review No.</th>
+             <th data-field="id">Bun</th>
+             <th data-field="name">Patty</th>
+             <th data-field="price">Chips</th>
+             <th data-field="price">Atmosphere</th>
+             <th data-field="price">Value</th>
+         </tr>
+       </thead>
+       <tbody>
+         {{#each model.reviews as |review|}}
+         <tr>
+           <td>{{review.id}}</td>
+           <td>{{star-rating item=review rating=review.bun fullClassNames='fa fa-star' emptyClassNames='' }}</td>
+           <td> {{star-rating item=review rating=review.patty fullClassNames='fa fa-star' emptyClassNames='' }}</td>
+           <td> {{star-rating item=review rating=review.chips fullClassNames='fa fa-star' emptyClassNames='' }}</td>
+           <td> {{star-rating item=review rating=review.atmosphere fullClassNames='fa fa-star' emptyClassNames='' }}</td>
+           <td> {{star-rating item=review rating=review.chips fullClassNames='fa fa-star' emptyClassNames='' }}</td>
+         </tr>
+         {{/each}}
 
-      Bun: {{review.bun}}<br>
-      Patty: {{review.patty}}<br>
-      Chips: {{review.chips}}<br>
-      atmosphere: {{review.atmosphere}}<br>
-      value: {{review.value}}<br>
-      comment: {{review.comment}}<br>
-      <!-- by User: {{user.email}} -->
+       </tbody>
 
-      </div>
-    {{/each}}
+     </table>
+
+     {{#link-to 'burger-places.index' class="waves-effect waves-light red btn "}} Add Review
+     {{/link-to}}
