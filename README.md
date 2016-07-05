@@ -1,7 +1,33 @@
-# Emberapi2
+# Project Planning for Burgato - Australia's number one burger review site.
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Trello
+
+Link to [public Trello board])https://trello.com/b/kmA27OO5/project-three-wdi7)
+
+## Wireframes
+Balsamiq mockups was used to wireframe the project. A PDF copy of the wireframe is included in the GitHub repository.
+
+
+##User Stories -who are your users, what do they want, and why?
+
+*Hungry Web-Junky is looking for a decent Burger place on the web Burgato helps to find his new favourite place based on reviews by other Burger Junkies
+
+
+## Project Approach /  Technologies Used
+
+
+### Back End Application
+
+##### Rails
+Rails 4 was used as the back end of our project. GitHub repository for our back end application is available here:
+[Back End Rails Application Github repository](https://github.com/Yogibeer2001/Burgato)
+
+We decided to use rails as our back end given our competence with this framework. Our research also indicated that when undertaken API driven development rails is one of the most popular frameworks.
+
+### Front End Application
+##### Ember.js
+
+On the basis that our bac
 
 ## Prerequisites
 
@@ -15,39 +41,28 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
+Before attempting to run our application please do the following:
+
 * `git clone <repository-url>` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
+* 'ember install ember-cli-star-rating'
 
 ## Running / Development
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
 ### Deploying
 
+#### Heroku
 Specify what it takes to deploy your app.
 
-## Further Reading / Useful Links
+## Further Reading on Ember and other resources relied upon
 
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://ember-cli.com/)
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
