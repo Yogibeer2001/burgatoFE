@@ -1,4 +1,5 @@
 
+<div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
     {{#link-to 'burger-places' id="logo-container" class="brand-logo left"}} <img class="header-img" id="logo" src="http://i.imgur.com/bx0G0LA.png"/>Burgato{{/link-to}}
@@ -8,11 +9,15 @@
       </ul>
     </div>
   </nav>
-<body>
+</div>
+
+  <body>
     <div class="container">
     {{outlet}}
   </div>
-  </body>
+</body>
+
+
 
   <footer class="page-footer">
             <div class="container">
