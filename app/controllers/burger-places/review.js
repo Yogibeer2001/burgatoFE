@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
         const atmosphere = this.get('atmosphere');
         const comment = this.get('comment');
         const value = this.get('value');
-        const burgerPlaceId = this.get('burgerPlaceId');
+        const burgerPlaceId = this.get('model.id');
         // const userId = this.get('user_id');
         // const burgerPlaceId = this.get('burger_place_id');
 
@@ -35,4 +35,3 @@ export default Ember.Controller.extend({
         // deleteReview('review', reviews_id);
         }
 });
->>>>>>> fc6a3ba09eaaa76bc14368beb8f774293ba03058:app/controllers/burger-places/review.js

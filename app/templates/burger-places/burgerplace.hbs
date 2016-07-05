@@ -44,10 +44,9 @@
            <td> {{star-rating item=review rating=review.chips fullClassNames='fa fa-star' emptyClassNames='' }}</td>
          </tr>
          {{/each}}
+         {{#link-to 'burger-places.review' model class="waves-effect waves-light red btn "}} Add Review
+         {{/link-to}}
 
        </tbody>
 
      </table>
-
-     {{#link-to 'burger-places.index' class="waves-effect waves-light red btn "}} Add Review
-     {{/link-to}}
