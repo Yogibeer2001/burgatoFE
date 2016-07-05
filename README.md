@@ -90,6 +90,7 @@ Our back end application is deployed on Heroku and hosted here:
 <https://fast-basin-31464.herokuapp.com/burger_places>
 
 Our complete application is deployed on Heroku and hosted here:
+<https://pristine-isle-royale-62332.herokuapp.com/>
 
 
 ## Further Reading on Ember and other resources relied upon
