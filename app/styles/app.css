@@ -5,6 +5,13 @@ article {
   padding: 15px;
 }
 
+
+body {
+   min-height: 100vh;
+ }
+
+
+
 .rating {
   color: orange;
 }
@@ -17,6 +24,9 @@ div.detail {
   margin-top: 5px;
 }
 
+i.material-icons.red-text {
+  padding-top: 8px;
+}
 
 nav {
   background-color: #d50000;
@@ -31,8 +41,9 @@ footer.page-footer {
 img#landing-image {
   width:250px;
   height: auto;
+  display: block;
   box-sizing: border-box;
-  margin-left: 205px;
+  margin: auto;
 }
 
 #logo {

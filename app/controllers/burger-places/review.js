@@ -35,4 +35,3 @@ export default Ember.Controller.extend({
         // deleteReview('review', reviews_id);
         }
 });
->>>>>>> fc6a3ba09eaaa76bc14368beb8f774293ba03058:app/controllers/burger-places/review.js

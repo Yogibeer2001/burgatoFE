@@ -12,14 +12,32 @@
 </div>
   <article class="name">
     <h4>{{model.name}}</h4>
-    <div class="rating left-align">
-      <span>Overall Rating:</span> {{model.reviewScore}}
+
+    <div class="row">
+      <div class="col s6">
+        <span>Overall Rating:</span> {{model.reviewScore}}
+        <span>Location:</span> {{model.address}}, {{model.suburb}}, {{model.post-code}}<br>
+        <span>Contact: </span> {{model.phoneNo}} <br>
+        <span>Web: </span> {{model.webAddress}} <br>
+        <span>Lastest Comments: </span> {{review.comments}} <br>
+      </div>
+      <div class="col s6">
+        <div class="right-align">
+        <iframe
+          width="250"
+          height="250"
+          frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDCu3ZkqRl_jISj7svDHn8xxK_HZq4LU-w
+            &q=New+York+Burgers,Melbourne" allowfullscreen>
+        </iframe>
+        </div>
+      </div>
     </div>
-    <div class="detail type">
-      <span>Location:</span> {{model.address}}, {{model.suburb}}, {{model.post-code}}<br>
-      <span>Contact: </span> {{model.phoneNo}} <br>
-      <span>Web: </span> {{model.webAddress}}
-    </div>
+
+
+      {{#link-to 'burger-places.index' class="waves-effect waves-light red btn "}} Add  Review
+      {{/link-to}}
+
 
   </article>
   <table class="striped centered">
@@ -48,6 +66,3 @@
        </tbody>
 
      </table>
-
-     {{#link-to 'burger-places.index' class="waves-effect waves-light red btn "}} Add Review
-     {{/link-to}}
