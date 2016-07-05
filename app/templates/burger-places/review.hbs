@@ -31,6 +31,8 @@
 
       <div>
         <button class="waves-effect waves-light red btn" {{action 'createReview'}}>Submit</button>
+        {{#link-to 'burger-places.index' class="waves-effect waves-light red btn"}} Return to search
+        {{/link-to}}
       </div>
 
       {{#if responseMessage}}

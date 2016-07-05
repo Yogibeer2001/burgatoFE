@@ -36,14 +36,10 @@ Ember is also considered highly suitable for consuming a JSON APIs with a number
 ## Problems / Bugs encountered
 
 
-## Bugs encountered
-
-
 
 ## Lessons learnt
 
 #### Reach out to the Community
-
 
 We posted a number of questions on the Ember slack channel which were met with really helpful responses. Some of the community resources provided to us are as follows:
 
